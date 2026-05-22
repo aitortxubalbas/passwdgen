@@ -43,9 +43,10 @@ save = input("")
 
 while True:
     if save != "Y" or save != "N" :
-        if save != "Y":
+        if save == "Y":
             with open ("passwd.txt", "a", encoding="utf-8") as archivo:
                 archivo.write(passwd+ "\n")
+            print("Contraseña guardada")
             break
         else:
             break
