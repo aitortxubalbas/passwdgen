@@ -1,4 +1,10 @@
 import random
+
+def guardado():
+    with open ("passwd.txt", "a", encoding="utf-8") as archivo:
+        archivo.write(passwd+ "\n")
+        print("Contraseña guardada")
+
 passwd=""
 char=""
 letras = (
@@ -41,14 +47,9 @@ else:
 print("Desea guardar la contraseña en un fichero de texto: Y/N")
 save = input("")
 
-while True:
-    if save != "Y" or save != "N" :
-        if save == "Y":
-            with open ("passwd.txt", "a", encoding="utf-8") as archivo:
-                archivo.write(passwd+ "\n")
-            print("Contraseña guardada")
-            break
-        else:
-            break
+while save.upper() == "Y" or save.upper() == "N":
+    if save == "Y":
+        guardado()
     else:
-        print("Desea guardar la contraseña en un fichero de texto: Y/N")
+         break
+    break
