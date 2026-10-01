@@ -48,7 +48,7 @@ print("Desea guardar la contraseña en un fichero de texto: Y/N")
 save = input("")
 
 while save.upper() == "Y" or save.upper() == "N":
-    if save == "Y":
+    if save.upper() == "Y":
         guardado()
     else:
         break
